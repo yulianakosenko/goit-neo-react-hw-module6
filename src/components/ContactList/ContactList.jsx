@@ -12,7 +12,10 @@ export default function ContactList() {
     )
     .sort((a, b) => a.name.localeCompare(b.name));
 
-  if (filteredContacts.length === 0) {
+  // 🔢 КАУНТЕР
+  const total = filteredContacts.length;
+
+  if (total === 0) {
     return <p className={css.empty}>No contacts found ✨</p>;
   }
 
@@ -29,18 +32,25 @@ export default function ContactList() {
   }, {});
 
   return (
-    <div className={css.wrapper}>
-      {Object.entries(groupedContacts).map(([letter, contacts]) => (
-        <div key={letter} className={css.section}>
-          <p className={css.letter}>{letter}</p>
+    <>
+      {/* 🔢 КАУНТЕР */}
+      <p className={css.counter}>
+        {total} contact{total !== 1 && "s"}
+      </p>
 
-          <ul className={css.list}>
-            {contacts.map((contact) => (
-              <Contact key={contact.id} contact={contact} />
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
+      <div className={css.wrapper}>
+        {Object.entries(groupedContacts).map(([letter, contacts]) => (
+          <div key={letter} className={css.section}>
+            <p className={css.letter}>{letter}</p>
+
+            <ul className={css.list}>
+              {contacts.map((contact) => (
+                <Contact key={contact.id} contact={contact} />
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
