@@ -1,16 +1,117 @@
-# React + Vite
+# 📱 Phonebook App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Сучасний застосунок для керування контактами, створений з використанням React та Redux Toolkit.
 
-Currently, two official plugins are available:
+Застосунок дозволяє додавати, видаляти та шукати контакти, має приємний адаптивний інтерфейс
+і зберігає дані між перезавантаженнями сторінки.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Функціональність
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Додавання та видалення контактів
+- Пошук контактів за ім’ям
+- Збереження контактів за допомогою Redux Persist
+- Валідація номера телефону з підтримкою коду країни
+- Автоматичне перетворення `00` на `+` для міжнародних номерів
+- Підказки та повідомлення про помилки при некоректному введенні
+- Empty state при відсутності контактів
+- Лічильник контактів
+- CSS-анімація додавання контакту (без JavaScript)
+- Алфавітні секції контактів (як у телефонних застосунках)
+- Перемикач світлої / темної теми 🌙
+- Mobile-first та адаптивний дизайн
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Використані технології
+
+- **React 18**
+- **Redux Toolkit**
+- **React Redux**
+- **Redux Persist**
+- **Vite**
+- **CSS Modules**
+
+---
+
+## 📱 UX та дизайн
+
+Застосунок реалізовано з орієнтацією на мобільні пристрої (mobile-first).
+Використовується картковий layout, м’які тіні, зручні для натискання елементи
+та алфавітне групування контактів для комфортної навігації навіть при великій кількості записів.
+
+Підтримка темної теми покращує доступність та зручність використання.
+
+---
+
+## 🚀 Демо
+
+Застосунок задеплоєний на **Vercel**
+
+> 🔗 
+
+---
+
+## 📂 Структура проєкту
+
+```txt
+goit-neo-react-hw-module6/
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── components/
+│   │   ├── App/
+│   │   │   ├── App.jsx
+│   │   │   └── App.module.css
+│   │   ├── ContactsForm/
+│   │   │   ├── ContactsForm.jsx
+│   │   │   └── ContactsForm.module.css
+│   │   ├── ContactList/
+│   │   │   ├── ContactList.jsx
+│   │   │   └── ContactList.module.css
+│   │   ├── Contact/
+│   │   │   ├── Contact.jsx
+│   │   │   └── Contact.module.css
+│   │   └── SearchBox/
+│   │       ├── SearchBox.jsx
+│   │       └── SearchBox.module.css
+│   │
+│   ├── redux/
+│   │   ├── store.js
+│   │   ├── contactsSlice.js
+│   │   └── filtersSlice.js
+│   │
+│   ├── main.jsx
+│   └── index.css
+│
+├── .gitignore
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+└── README.md
+
+
+## ✅ Правила валідації номерів
+
+* Дозволені символи: цифри `0–9` та `+`
+* Максимальна довжина номера: **14 символів**
+* Символ `+` дозволений лише на початку
+* Якщо номер починається з `00`, він автоматично перетворюється на `+`
+
+---
+
+## 🧠 Примітка
+
+Проєкт виконано в рамках навчального завдання
+**GoIT Neoversity – React, Модуль 6**
+з метою демонстрації керування станом за допомогою Redux Toolkit замість локального стану React.
+
+---
+
+## 👤 Автор
+
+Розроблено: **Yuliya Kostenko**
+
+```

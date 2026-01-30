@@ -1,0 +1,30 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f9fafb, #eef2ff);
+  padding: 40px 16px;
+}
+
+.card {
+  max-width: 420px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 4px;
+  color: #1f2937;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
